@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title> Studio Pink House - Cadastro </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/style_menu.css">
+    <style>
+        .conteudo {
+            padding-top: 50px;
+            text-align: center;
+            font-family: cocosharp-extralight;
+            font-size: 30px;
+            padding-bottom: 50px;
+        }
+        .cadastro {
+            font-family: cocosharp-extralight;
+            font-size: 20px;
+            text-align: left;
+            padding-left: 100px;
+            letter-spacing: 0.9px;
+        }
+        .menu_de_procedimentos {
+            font-size: 18px;
+            padding: 9px;
+            padding-left: 99px;
+            border-radius: 3px;
+            line-height: 30px;
+        }
+        .text_nome {
+            margin-left: 300px;
+        }
+        .text_email {
+            margin-left: 300px;
+        }
+        .text_senha {
+            margin-left: 300px;
+        }
+        .input_nome {
+            width: 318px;
+            margin: 0 auto;
+            padding: 9px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            font-size: 13px;
+        }
+        .input_email {
+            width: 318px;
+            margin: 0 auto;
+            padding: 9px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            font-size: 13px;
+        }
+        .input_senha {
+            width: 318px;
+            margin: 0 auto;
+            padding: 9px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            font-size: 13px;
+        }
+        .button1 {
+            padding: 10px;
+            width: 150px;
+            margin: 0 auto;
+            margin-top: 20px;
+            border-radius: 3px;
+            border: 2px solid #FA008A;
+            color: #FA008A;
+            text-transform: uppercase;
+            font-weight: 700;
+            background: linear-gradient();
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+        }
+        .button1:hover {
+            box-shadow: rgb(250, 0, 138) 180px 0px 0px 1px inset;
+            color: #FFF;
+        }
+        .login {
+            font-family: cocosharp-extralight;
+            font-size: 18px;
+            padding-top: 40px;
+        }
+        </style>
+        <script>
+        function enviar()
+        {
+            var nome = document.cadastro.txtnome.value;
+            if (nome.length == 0)
+            {
+                document.getElementById("erro_nome").textContent = "*Campo Obrigatório.";
+                document.getElementById("erro_nome").style.color = "red";
+                document.getElementById("erro_nome").style.fontStyle = "italic";
+                document.getElementById("erro_nome").style.fontSize = "13px";
+                document.cadastro.txtnome.style.border = "1px solid red";
+                document.cadastro.txtnome.style.background = "#FFF5EE";
+                return false;
+            }
+            else 
+            {
+                document.getElementById("erro_nome").textContent = "";
+                document.cadastro.txtnome.style.border = "1px solid black";
+                document.cadastro.txtnome.style.background = "#FFFFFF";
+            }
+
+            var email = document.cadastro.txtemail.value;
+            if (email.length == 0)
+            {
+                document.getElementById("erro_email").textContent = "*Campo Obrigatório.";
+                document.getElementById("erro_email").style.color = "red";
+                document.getElementById("erro_email").style.fontStyle = "italic";
+                document.getElementById("erro_email").style.fontSize = "13px";
+                document.cadastro.txtemail.style.border = "1px solid red";
+                document.cadastro.txtemail.style.background = "#FFF5EE";
+                return false;
+            }
+            else 
+            {
+                document.getElementById("erro_email").textContent = "";
+                document.cadastro.txtemail.style.border = "1px solid black";
+                document.cadastro.txtemail.style.background = "#FFFFFF";
+            }
+
+            var senha = document.cadastro.txtsenha.value;
+            if (senha.length == 0)
+            {
+                document.getElementById("erro_senha").textContent = "*Campo Obrigatório.";
+                document.getElementById("erro_senha").style.color = "red";
+                document.getElementById("erro_senha").style.fontStyle = "italic";
+                document.getElementById("erro_senha").style.fontSize = "13px";
+                document.cadastro.txtsenha.style.border = "1px solid red";
+                document.cadastro.txtsenha.style.background = "#FFF5EE";
+                return false;
+            }
+            else 
+            {
+                document.getElementById("erro_senha").textContent = "";
+                document.cadastro.txtsenha.style.border = "1px solid black";
+                document.cadastro.txtsenha.style.background = "#FFFFFF";
+            }
+
+            document.cadastro.submit();
+        }
+        </script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn"> MENU
+                <i class="fa fa-caret down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="index.html" title="Home"><p> PÁGINA INICIAL </p></a>
+                <a href="Login_Agendamento.html" title="Faça já o seu agendamento"><p> AGENDAMENTO </p></a>
+                <a href="Feedback.html" title="Sua Opinião Conta Muita"><p> FEEDBACKS </p></a>
+                <a href="Sobre Nós.html" title="Isso é quem nós somos"><p> SOBRE NÓS </p></a>
+            </div>
+        </div>
+        <h3 class="titulo"> Studio Pink House </h3>
+    </div>
+
+    <div class="conteudo">
+        FAÇA O SEU CADASTRO
+        <br><br><br>
+        <form class="cadastro" name="cadastro" method="post" action="Gravar_Cadastro.jsp"> 
+            <p class="text_nome"> Nome: <input class="input_nome" type="text" name="txtnome" placeholder="Digite seu Nome" maxlength="30">
+            <span id="erro_nome"></span> <br> </p>
+            <p class="text_email"> E-mail: <input class="input_email" type="text" name="txtemail" placeholder="Digite seu E-mail" maxlength="50">
+            <span id="erro_email"></span> <br> </p>
+            <p class="text_senha"> Senha: <input class="input_senha" type="password" name="txtsenha" placeholder="Digite sua Senha" maxlength="10">
+            <span id="erro_senha"></span> <br> </p>
+        </form>
+        <center>
+            <button class="button1" type="button" value="ENVIAR" onclick="enviar()"> FAZER CADASTRO </button>
+        </center>
+        <div class="login">
+            Já possui uma conta? <a href="Login_Agendamento.html"> Entre agora mesmo. </a>
+        </div>
+    </div>
+
+    <div class="fale_conosco"> 
+        Fale Conosco:
+        <a href="https://instagram.com/studio.eduardamelo?igshid=MzRlODBiNWFlZA=="><img class="img2" src="Imagens/img_down_instagram.png" width="38px" height="38px"></a> 
+        <a href="https://wa.me/message/BMCVOXGPL43FI1"><img class="img1" src="Imagens/img_down_whatsapp.png" width="35px" height="35px"></a>
+    </div>
+    <div class="downbar">
+        <footer>
+            &copy; Todos os direitos reservados.
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title> Studio Pink House - Feedbacks </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/style_menu.css">
+    <style>
+    .conteudo {
+        padding-top: 50px;
+        text-align: center;
+        font-family: cocosharp-extralight;
+        font-size: 30px;
+        padding-bottom: 50px;
+    }
+    .titulo {
+        font-size: 20px;
+    }
+    .feedbacks {
+        font-family: cocosharp-extralight;
+        font-size: 18px;
+        text-align: left;
+        padding-left: 80px;
+        letter-spacing: 0.9px;
+        line-height: 28px;
+    }
+    .data1 {
+        display: inline-flex;
+        padding-left: 742px;
+    }
+    .data2 {
+        display: inline-flex;
+        padding-left: 700px;
+    }
+    .data3 {
+        display: inline-flex;
+        padding-left: 726px;
+    }
+    .caixa_de_feedback {
+        width: 800px;
+        height: 150px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+    .input_nome {
+        width: 373px;
+        margin: 0 auto;
+        padding: 9px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        font-size: 13px;
+    }
+    .button_feedback {
+        margin-top: 50px;
+        text-decoration: none;
+        color: rgb(250, 0, 138);
+        padding: 10px;
+        width: 150px;
+        font-size: 18px;
+        border: 2px solid rgb(250, 0, 138);
+        position: relative;
+        transition: .5s;
+        }
+    .button_feedback::before,
+    .button_feedback::after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border: inherit;
+        transition: .5s;
+    }
+    .button_feedback::before {
+        top: -10px;
+        left: -10px;
+        border-width: 2px 0 0 2px;
+    }
+    .button_feedback::after {
+        bottom: -10px;
+        right: -10px;
+        border-width: 0 2px 2px 0;
+    }
+    .button_feedback:hover::before,
+    .button_feedback:hover::after {
+        cursor: pointer;
+        width: calc(100% + 18px);
+        height: calc(100% + 18px)
+    }    
+    </style>
+
+    <script>
+        function enviar()
+        {
+            var texto = document.feedback.caixa_de_feedback.value;
+            if (texto.length == 0)
+            {
+                document.getElementById("erro_text").textContent = "*Campo Obrigatório.";
+                document.getElementById("erro_text").style.color = "red";
+                document.getElementById("erro_text").style.fontStyle = "italic";
+                document.getElementById("erro_text").style.fontSize = "14px";
+                return false;
+            }
+            else
+            {
+                document.getElementById("erro_text").textContent = "";
+            }
+
+            var nome = document.feedback.txtnome.value;
+            if (nome.length == 0)
+            {
+                document.getElementById("erro_nome").textContent = "*Campo Obrigatório.";
+                document.getElementById("erro_nome").style.color = "red";
+                document.getElementById("erro_nome").style.fontStyle = "italic";
+                document.getElementById("erro_nome").style.fontSize = "14px";
+                document.form1.txtnome.style.border = "1px solid red";
+                document.form1.txtnome.style.background = "#FFF5EE";
+                return false;
+            }
+            else
+            {
+                document.getElementById("erro_nome").textContent = "";
+            }
+
+            var radiobox1 = document.getElementById("star_01");
+            var radiobox2 = document.getElementById("star_02");
+            var radiobox3 = document.getElementById("star_03");
+            var radiobox4 = document.getElementById("star_04");
+            var radiobox5 = document.getElementById("star_05");
+            if (radiobox1.checked || radiobox2.checked || radiobox3.checked || radiobox4.checked || radiobox5.checked)
+            {
+
+            }
+            else
+            {
+                document.getElementById("erro_classificacao").textContent = "*Escolha pelo menos 1 opção.";
+                document.getElementById("erro_classificacao").style.color = "red";
+                document.getElementById("erro_classificacao").style.fontStyle = "italic";
+                document.getElementById("erro_classificacao").style.fontSize = "14px";
+                return false;
+            }
+            
+            document.feedback.submit();
+        }
+    </script>
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn"> MENU
+                <i class="fa fa-caret down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="index.html" title="Home"><p> PÁGINA INICIAL </p></a>
+                <a href="Login_Agendamento.html" title="Faça já o seu agendamento"><p> AGENDAMENTO </p></a>
+                <a href="Feedback.html" title="Sua Opinião Conta Muita"><p> FEEDBACKS </p></a>
+                <a href="Sobre Nós.html" title="Isso é quem nós somos"><p> SOBRE NÓS </p></a>
+            </div>
+        </div>
+        <h3 class="titulo"> Studio Pink House </h3>
+    </div>
+
+    <div class="conteudo">
+        FEEDBACKS <br><br><br>
+        <div class="feedbacks">
+            <div class="titulo"> <b>Opiniões em Destaque</b> </div> <br><br>
+            Maria Eloisa &#10029;&#10029;&#10029;&#10029;&#10029; <div class="data1"> 12 de Jul. </div> <br>
+            Minhas unhas ficaram perfeitas, estou apaixonada. <br><br><br>
+            Estefani Eduarda &#10029;&#10029;&#10029;&#10029;&#10029; <div class="data2"> 23 de Ago. </div> <br>
+            O melhor lugar para se fazer extensão de cílios e design de sobrancelhas, amei! <br><br><br>
+            Jaqueline Dias &#10029;&#10029;&#10029;&#10029;&#10029; <div class="data3"> 30 de Ago. </div> <br>
+            Estou outra mulher com esse alongamento que fiz, ficou incrível, obrigada!!! <br><br><br><br>
+
+            <form name="feedback" method="post" action="gravar_feedback.jsp">
+                <div class="titulo"> <b>Deixe também a sua opinião:</b> <span id="erro_text"></span> </div>
+                <textarea class="caixa_de_feedback" id="caixa_de_feedback" type="text" name="caixa_de_feedback" maxlength="120"></textarea> <br>
+                Nome: <input class="input_nome" type="text" name="txtnome" placeholder="Digite seu Nome" maxlength="20">
+                <span id="erro_nome"></span> <br>
+                Classificação: 
+                <span id="erro_classificacao"></span> <br>
+                <input type="radio" name="classificacao" id="star_01" value="star_01"> &#10029; <br>
+                <input type="radio" name="classificacao" id="star_02" value="star_02"> &#10029; &#10029; <br>
+                <input type="radio" name="classificacao" id="star_03" value="star_03"> &#10029; &#10029; &#10029; <br>
+                <input type="radio" name="classificacao" id="star_04" value="star_04"> &#10029; &#10029; &#10029; &#10029; <br>
+                <input type="radio" name="classificacao" id="star_05" value="star_05"> &#10029; &#10029; &#10029; &#10029; &#10029; <br>
+                <center><button class="button_feedback" type="button" value="ENVIAR_FEEDBACK" onclick="enviar()"> ENVIAR </button></center>
+            </form>
+        </div>
+    </div>
+
+    <div class="fale_conosco"> 
+        Fale Conosco:
+        <a href="https://instagram.com/studio.eduardamelo?igshid=MzRlODBiNWFlZA=="><img class="img2" src="Imagens/img_down_instagram.png" width="38px" height="38px"></a> 
+        <a href="https://wa.me/message/BMCVOXGPL43FI1"><img class="img1" src="Imagens/img_down_whatsapp.png" width="35px" height="35px"></a>
+    </div>
+    <div class="downbar">
+        <footer>
+            &copy; Todos os direitos reservados.
+        </footer>
+    </div>
+</body>
+</html>
