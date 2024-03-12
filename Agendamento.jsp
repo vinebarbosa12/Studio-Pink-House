@@ -21,26 +21,44 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="CSS/style_menu.css">
         <style>
+        @font-face {
+            font-family: "Coco";
+            src: url("Fontes/CocoSharp-ExtraLight.otf") format("opentype");
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: "Sig";
+            src: url("Fontes/Signatra.otf") format("opentype"), url(Fontes/Signatra.ttf) format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: "Big";
+            src: url("Fontes/BigCaslonFB-Regular.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
         .conteudo {
             padding-top: 50px;
             text-align: center;
-            font-family: cocosharp-extralight;
+            font-family: "Coco";
             font-size: 30px;
             padding-bottom: 40px;
         }
         .bem_vindo {
             padding-top: 12px;
             text-align: center;
-            font-family: cocosharp-extralight;
+            font-family: "Coco";
             font-size: 25px;
         }
         .consulta {
             text-align: center;
-            font-family: cocosharp-extralight;
+            font-family: "Coco";
             font-size: 15px;
         }
         .agendamento {
-            font-family: cocosharp-extralight;
+            font-family: "Coco";
             font-size: 20px;
             text-align: left;
             padding-left: 100px;

@@ -19,14 +19,32 @@
     <meta charset="UTF-8">
     <title> Studio Pink House - Consulta Agendamento </title>
     <style>
+        @font-face {
+            font-family: "Coco";
+            src: url("Fontes/CocoSharp-ExtraLight.otf") format("opentype");
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: "Sig";
+            src: url("Fontes/Signatra.otf") format("opentype"), url(Fontes/Signatra.ttf) format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: "Big";
+            src: url("Fontes/BigCaslonFB-Regular.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
         div {
             text-align: center;
-            font-family: cocosharp-extralight;
+            font-family: "Coco";
             font-size: 30px;
         }
         a {
             text-align: center;
-            font-family: cocosharp-extralight;
+            font-family: "Coco";
             font-size: 15px;
         }
         .logout {
@@ -36,7 +54,7 @@
             background-color: rgb(248, 207, 228);
             text-align: center;
             table-layout: fixed;
-            font-family: cocosharp-extralight;
+            font-family: "Coco";
             font-size: 15px;
         }
         td {

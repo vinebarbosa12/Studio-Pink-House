@@ -1,7 +1,7 @@
 .navbar {
     margin: -8px;
     background-color: #2D2926;
-    font-family: cocosharp-extralight;
+    font-family: "Coco";
     height: 80px;
 }
 .navbar a {
@@ -15,7 +15,7 @@
 .navbar .titulo {
     float: right;
     font-size: 52px;
-    font-family: signatra demo;
+    font-family: "Sig";
     letter-spacing: 5px;
     border: none;
     outline: none;
@@ -70,7 +70,7 @@
 }
 .fale_conosco {
     padding-bottom: 20px;
-    font-family: cocosharp-extralight;
+    font-family: "Coco";
     font-size: 20px;
 }
 .downbar {
